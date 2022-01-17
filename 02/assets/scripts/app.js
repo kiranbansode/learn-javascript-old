@@ -1,1 +1,1 @@
-let userName = "Kiran";
+let currentResult = 0;
