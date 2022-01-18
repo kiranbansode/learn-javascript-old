@@ -66,14 +66,3 @@ addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
-
-/* 
-	Not related to Calculator
-	! Code will be delete in next lecture
-*/
-
-let userName;
-console.log(userName); // undefined
-userName = null;
-console.log(userName); // null
-console.log(NaN * 3); // NaN
