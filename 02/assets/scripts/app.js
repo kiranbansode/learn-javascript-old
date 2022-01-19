@@ -30,20 +30,27 @@ function writeToLog(
 	console.log(logEntries);
 }
 
-function add() {
+function calculateResult(calculationType) {
 	const enteredNumber = getUserNumberIntput();
 	const initialResult = currentResult;
-	currentResult += parseInt(enteredNumber);
-	createAndWriteOutput("+", initialResult, enteredNumber);
-	writeToLog("ADD", initialResult, enteredNumber, currentResult);
+	let mathOperator;
+	if (calculationType === "ADD") {
+		currentResult += parseInt(enteredNumber);
+		mathOperator = "+";
+	} else {
+		currentResult -= parseInt(enteredNumber);
+		mathOperator = "-";
+	}
+	createAndWriteOutput(mathOperator, initialResult, enteredNumber);
+	writeToLog(calculationType, initialResult, enteredNumber, currentResult);
+}
+
+function add() {
+	calculateResult("ADD");
 }
 
 function subtract() {
-	const enteredNumber = getUserNumberIntput();
-	const initialResult = currentResult;
-	currentResult -= parseInt(enteredNumber);
-	createAndWriteOutput("-", initialResult, enteredNumber);
-	writeToLog("SUBTRACT", initialResult, enteredNumber, currentResult);
+	calculateResult("SUBTRACT");
 }
 
 function multiply() {
