@@ -31,6 +31,45 @@ function writeToLog(
 }
 
 function calculateResult(calculationType) {
+	if (
+		calculationType !== "ADD" &&
+		calculationType !== "SUBTRACT" &&
+		calculationType !== "MULTIPLY" &&
+		calculationType !== "DIVIDE"
+	) {
+		return;
+	}
+
+	if (
+		calculationType === "ADD" ||
+		calculationType === "SUBTRACT" ||
+		calculationType === "MULTIPLY" ||
+		calculationType === "DIVIDE"
+	) {
+		/* 
+	const enteredNumber = getUserNumberIntput();
+	const initialResult = currentResult;
+	let mathOperator;
+
+	if (calculationType === "ADD") {
+		currentResult += parseInt(enteredNumber);
+		mathOperator = "+";
+	} else if (calculationType === "SUBTRACT") {
+		currentResult -= parseInt(enteredNumber);
+		mathOperator = "-";
+	} else if (calculationType === "MULTIPLY") {
+		currentResult *= parseInt(enteredNumber);
+		mathOperator = "*";
+	} else if (calculationType === "DIVIDE") {
+		currentResult /= parseInt(enteredNumber);
+		mathOperator = "/";
+	}
+
+	createAndWriteOutput(mathOperator, initialResult, enteredNumber);
+	writeToLog(calculationType, initialResult, enteredNumber, currentResult);
+	
+	*/
+	}
 	const enteredNumber = getUserNumberIntput();
 	const initialResult = currentResult;
 	let mathOperator;
