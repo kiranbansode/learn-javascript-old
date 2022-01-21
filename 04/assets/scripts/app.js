@@ -28,9 +28,9 @@ adjustHealthBars(chosenMaxLife);
 function writeToLogs(ev, val, monsterHealth, playerHealth) {
 	let logEntry = {
 		event: ev,
-		value: val,
-		finalMonsterHealth: monsterHealth,
-		finalPlayerHealth: playerHealth,
+		value: Math.floor(val),
+		finalMonsterHealth: Math.floor(monsterHealth),
+		finalPlayerHealth: Math.floor(playerHealth),
 	};
 
 	switch (ev) {
@@ -178,8 +178,16 @@ function printLogHandler() {
 		console.log(battleLog[i]);
 	} */
 
-	for (const logEntry of battleLog) {
+	/* 	for (const logEntry of battleLog) {
 		console.log(logEntry);
+	} */
+	let i = 0;
+	for (const logEntry of battleLog) {
+		console.log(`#${i}`);
+		for (const key in logEntry) {
+			console.log(`${key} : ${logEntry[key]}`);
+		}
+		i++;
 	}
 }
 
