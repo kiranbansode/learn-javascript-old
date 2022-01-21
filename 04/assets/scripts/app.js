@@ -26,7 +26,16 @@ function getMaxLifeValues() {
 	return parsedValue;
 }
 
-let chosenMaxLife = getMaxLifeValues();
+let chosenMaxLife;
+
+try {
+	chosenMaxLife = getMaxLifeValues();
+} catch (error) {
+	console.log(error);
+	chosenMaxLife = 100;
+	alert(" You entered wront number, 100 is assigned");
+	// throw error;
+}
 
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
