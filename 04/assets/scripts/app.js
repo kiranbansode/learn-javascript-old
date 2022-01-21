@@ -33,7 +33,25 @@ function writeToLogs(ev, val, monsterHealth, playerHealth) {
 		finalPlayerHealth: playerHealth,
 	};
 
-	if (event === LOG_EVENT_PLAYER_ATTACK) {
+	switch (ev) {
+		case LOG_EVENT_PLAYER_ATTACK:
+			logEntry.targe = "MONSTER";
+			break;
+		case LOG_EVENT_PLAYER_STRONG_ATTACK:
+			logEntry.targe = "MONSTER";
+			break;
+		case LOG_EVENT_MONSTER_ATTACK:
+			logEntry.targe = "PLAYER";
+			break;
+		case LOG_EVENT_PLAYER_HEAL:
+			logEntry.target = "PLAYER";
+			break;
+		default:
+			logEntry.target = null;
+			break;
+	}
+
+	/* if (event === LOG_EVENT_PLAYER_ATTACK) {
 		logEntry.targe = "MONSTER";
 	} else if (event === LOG_EVENT_PLAYER_STRONG_ATTACK) {
 		logEntry.targe = "MONSTER";
@@ -41,7 +59,7 @@ function writeToLogs(ev, val, monsterHealth, playerHealth) {
 		logEntry.targe = "PLAYER";
 	} else if (event === LOG_EVENT_PLAYER_HEAL) {
 		logEntry.target = "PLAYER";
-	}
+	} */
 
 	battleLog.push(logEntry);
 }
