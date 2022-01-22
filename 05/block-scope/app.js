@@ -26,6 +26,8 @@ console.log(name, hobbies);
 greet();
  */
 
-console.log(username);
+"use strict";
 
-let username = "Kiran";
+const username = "Kiran";
+var undefined = 5;
+console.log(username);
