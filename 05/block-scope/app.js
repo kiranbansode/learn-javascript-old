@@ -1,4 +1,4 @@
-let name = "Kiran";
+/* let name = "Kiran";
 
 if (name === "Kiran") {
 	let hobbies = ["Sports", "Cooking"];
@@ -24,3 +24,8 @@ function greet() {
 console.log(name, hobbies);
 
 greet();
+ */
+
+console.log(username);
+
+let username = "Kiran";
