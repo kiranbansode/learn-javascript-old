@@ -16,4 +16,6 @@ person.greet();
 
 console.dir(startGame);  */
 
-startGameBtn.addEventListener("click", start);
+startGameBtn.addEventListener("click", function () {
+	console.log("Game is already started...", age);
+});
