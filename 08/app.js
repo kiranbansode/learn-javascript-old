@@ -27,8 +27,7 @@ console.log(Array.from(listItems));
 // [li, li, li]
  */
 
-const hobbies = ["Cooking", "Sports"];
-const personalData = [30, "Kiran", { moreDetails: [] }];
+/* const personalData = [30, "Kiran", { moreDetails: [] }];
 
 const analyticsData = [
 	[1, 2, 6],
@@ -41,4 +40,15 @@ for (const data of analyticsData) {
 	}
 }
 
-console.log(personalData[1]);
+console.log(personalData[1]); */
+
+const hobbies = ["Cooking", "Sports"];
+hobbies.push("Coding");
+hobbies.unshift("Reading");
+const poppedValue = hobbies.pop();
+hobbies.shift();
+console.log(hobbies);
+
+hobbies[1] = "Coding";
+hobbies[5] = "Gaming";
+console.log(hobbies);
