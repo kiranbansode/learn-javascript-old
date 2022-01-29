@@ -1,4 +1,4 @@
-// Most preferable way to create array
+/* // Most preferable way to create array
 const numbers = [1, 2, 3];
 console.log(numbers);
 // [1, 2, 3]
@@ -25,3 +25,20 @@ console.log(listItems);
 
 console.log(Array.from(listItems));
 // [li, li, li]
+ */
+
+const hobbies = ["Cooking", "Sports"];
+const personalData = [30, "Kiran", { moreDetails: [] }];
+
+const analyticsData = [
+	[1, 2, 6],
+	[-5, 4, 2.1],
+];
+
+for (const data of analyticsData) {
+	for (const dataPoint of data) {
+		console.log(dataPoint);
+	}
+}
+
+console.log(personalData[1]);
