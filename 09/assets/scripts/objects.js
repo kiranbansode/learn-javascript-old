@@ -1,5 +1,12 @@
+const movieList = document.getElementById("movie-list");
+
+movieList.style["background-color"] = "red";
+movieList.style.display = "block";
+
+// create an object
 const person = {
-	name: "Kiran",
+	// special keys
+	"first name": "Kiran",
 	age: 26,
 	hobbies: ["Sports", "Coocking"],
 	greet: function () {
@@ -20,4 +27,5 @@ delete person.age;
 // Adding new property
 person.isAdmin = true;
 
-console.log(person);
+// Square Bracket Property Access
+console.log(person["first name"]);
