@@ -7,4 +7,17 @@ const person = {
 	},
 };
 
-person.greet();
+// deleting property
+delete person.age;
+
+// modifying existing property
+// person.age = undefined;
+person.age = null;
+
+// deleting property
+delete person.age;
+
+// Adding new property
+person.isAdmin = true;
+
+console.log(person);
