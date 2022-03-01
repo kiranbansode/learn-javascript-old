@@ -12,6 +12,7 @@ const person = {
 	greet: function () {
 		alert("Hi there");
 	},
+	1.5: "Hello",
 };
 
 // deleting property
@@ -29,3 +30,5 @@ person.isAdmin = true;
 
 // Square Bracket Property Access
 console.log(person["first name"]);
+console.log(person[1.5]);
+console.log(person);
