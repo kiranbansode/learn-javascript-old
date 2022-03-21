@@ -1,40 +1,31 @@
-const movieList = document.getElementById("movie-list");
+const addMovieBtn = document.getElementById("add-movie-btn");
+const searchBtn = document.getElementById("search-btn");
 
-movieList.style["background-color"] = "red";
-movieList.style.display = "block";
+const movies = [];
 
-const userChosenKeys = "level";
+const addMovieHandler = () => {
+	const title = document.getElementById("title").value;
+	const extraName = document.getElementById("extra-name").value;
+	const extraValue = document.getElementById("extra-value").value;
 
-// create an object
-const person = {
-	// special keys
-	"first name": "Kiran",
-	age: 26,
-	// setting property dynamically
-	[userChosenKeys]: "...",
-	hobbies: ["Sports", "Coocking"],
-	greet: function () {
-		alert("Hi there");
-	},
-	1.5: "Hello",
+	if (
+		title.trim() === "" ||
+		extraName.trim() === "" ||
+		extraValue.trim() === ""
+	) {
+		return;
+	}
+
+	const newMovie = {
+		info: {
+			title,
+			[extraName]: extraValue,
+		},
+		id: Math.random(),
+	};
+
+	movies.push(newMovie);
+	console.log(newMovie);
 };
 
-// deleting property
-delete person.age;
-
-// modifying existing property
-// person.age = undefined;
-person.age = null;
-
-// deleting property
-delete person.age;
-
-// Adding new property
-person.isAdmin = true;
-
-const keyName = "first name";
-
-// access property dynamically
-console.log(person[keyName]);
-console.log(person[1.5]);
-console.log(person);
+addMovieBtn.addEventListener("click", addMovieHandler);
