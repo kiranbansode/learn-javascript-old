@@ -20,6 +20,12 @@ const renderMovies = (filter = "") => {
 
 	filteredMovies.forEach((movie) => {
 		const movieEl = document.createElement("li");
+
+		// check for any existing properties
+		if ("info" in movie) {
+			console.log(movie.info);
+		}
+
 		const { info, ...otherProps } = movie;
 		console.log(otherProps);
 		const { title: movieTitle } = info;
