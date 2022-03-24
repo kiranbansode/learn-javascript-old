@@ -1,11 +1,12 @@
 class Product {
 	// field
-	title = "DEFAULT";
-	imageUrl;
-	description;
-	price;
+	// title = "DEFAULT";
+	// imageUrl;
+	// description;
+	// price;
 
 	constructor(title, image, desc, price) {
+		// Properties
 		this.title = title;
 		this.imageUrl = image;
 		this.description = desc;
